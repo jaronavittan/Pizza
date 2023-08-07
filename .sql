@@ -27,3 +27,8 @@ WHERE sku IS NULL;
 SELECT COUNT(item_price)
 FROM pizza_orders
 WHERE item_price >= 10;
+
+
+SELECT item_price
+FROM pizza_orders
+WHERE item_price BETWEEN 7 AND 12;
