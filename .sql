@@ -32,3 +32,8 @@ WHERE item_price >= 10;
 SELECT item_price
 FROM pizza_orders
 WHERE item_price BETWEEN 7 AND 12;
+
+
+UPDATE Customers
+SET sku = 17, item_name = 'Onion Soup', item_cat = 'Pizza', item_size = 'Family', item_price = '16'
+WHERE item_id = 4;
