@@ -54,6 +54,12 @@ WHERE item_id = 4;
 
 
 
+ALTER TABLE pizza_orders
+ADD city INT;
+
+ALTER TABLE toppings
+ADD vendor INT;
+ 
 
 
 
