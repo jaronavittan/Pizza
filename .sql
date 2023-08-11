@@ -61,8 +61,15 @@ ALTER TABLE toppings
 ADD vendor INT;
  
 
+CREATE TABLE Invoices
+(
+  InvoiceID int PRIMARY KEY,
+  Customer_ID int, -- FOREIGN KEY REFERENCES dbo.Customers...
+  InvoiceDate date
+);
 
 
+INSERT INTO Invoices VALUES(1, 3, 1996-01-16);
 
 
 
