@@ -73,7 +73,8 @@ INSERT INTO Invoices VALUES(1, 3, 1996-01-16);
 
 
 
-
+BACKUP DATABASE pizza_orders
+TO DISK = '';
 
 
 
