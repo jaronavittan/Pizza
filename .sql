@@ -77,7 +77,9 @@ BACKUP DATABASE pizza_orders
 TO DISK = '';
 
 
-
+SELECT item_price
+FROM toppings
+WHERE item_price BETWEEN 0 AND 1;
 
 
 
