@@ -9,12 +9,12 @@
 
 
 INSERT INTO pizza_orders VALUES(1,23,"Margarita","Pizza","Family",8);
-INSERT INTO pizza_orders VALUES(2,22,"Hawaiian","Pizza","Family",11);
-INSERT INTO pizza_orders VALUES(3,66,"Meat lovers","Pizza","Family",15);
+INSERT INTO pizza_orders VALUES(2,22,"Hawaiian","Meat Pizza","Family",11);
+INSERT INTO pizza_orders VALUES(3,66,"Meat lovers","Meat Pizza","Family",15);
 INSERT INTO pizza_orders VALUES(4,67,"Doulbe Cheese","Pizza","Family",9);
-INSERT INTO pizza_orders VALUES(5,12,"Pepperoni","Pizza","Family",9);
-INSERT INTO pizza_orders VALUES(6,23,"Supreme","Pizza","Family",14);
-INSERT INTO pizza_orders VALUES(7,45,"Bacon Ranch","Pizza","Family",11);
+INSERT INTO pizza_orders VALUES(5,12,"Pepperoni","Meat Pizza","Family",9);
+INSERT INTO pizza_orders VALUES(6,23,"Supreme","Meat Pizza","Family",14);
+INSERT INTO pizza_orders VALUES(7,45,"Bacon Ranch","Meat Pizza","Family",11);
 
 CREATE TABLE toppings (
   item_id INT,
@@ -72,7 +72,6 @@ CREATE TABLE Invoices
 INSERT INTO Invoices VALUES(1, 3, 1996-01-16);
 
 
-
 BACKUP DATABASE pizza_orders
 TO DISK = '';
 
@@ -81,6 +80,11 @@ SELECT item_price
 FROM toppings
 WHERE item_price BETWEEN 0 AND 1;
 
+
+CREATE VIEW no_meat AS
+SELECT  item_name, item_price
+FROM pizza_orders
+WHERE pizza_cat = 'Pizza';
 
 
 
