@@ -87,7 +87,14 @@ FROM pizza_orders
 WHERE pizza_cat = 'Pizza';
 
 
-
+CREATE TABLE ordered (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    City varchar(255),
+    CONSTRAINT CHK_order CHECK (Age>=18 AND City='tallahassee')
+);
 
 
 
