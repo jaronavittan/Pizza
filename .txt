@@ -97,7 +97,13 @@ CREATE TABLE ordered (
 );
 
 
-
+SELECT item_name, item_size, item_price
+FROM pizza_orders
+ORDER BY
+(CASE
+    WHEN item_price IS NULL THEN PRINT "please add a price"
+    ELSE NULL
+END);
 
 
 
