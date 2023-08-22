@@ -105,5 +105,6 @@ ORDER BY
     ELSE NULL
 END);
 
-
+ALTER TABLE pizza_orders
+ADD buys VARCHAR(225);
 
