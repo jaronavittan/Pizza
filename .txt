@@ -108,3 +108,15 @@ END);
 ALTER TABLE pizza_orders
 ADD buys VARCHAR(225);
 
+
+SELECT item_id AS itemid, item_price AS itemprice
+FROM pizza_orders
+WHERE itemid >= 3
+ORDER BY itemprice;
+
+
+
+
+
+
+
