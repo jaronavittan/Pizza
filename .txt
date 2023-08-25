@@ -123,3 +123,22 @@ WHERE item_size = 'Box';
 UPDATE toppings SET item_name='Tomaters' WHERE item_name='Tomatoes';
 
 
+SELECT *
+FROM toppings
+ORDER BY item_price ASC;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
