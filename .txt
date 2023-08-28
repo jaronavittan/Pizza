@@ -1,5 +1,5 @@
  CREATE TABLE pizza_orders (
-    item_id VARCHAR,
+    item_id VARCHAR UNIQUE,
     sku VARCHAR,
     item_name VARCHAR,
     item_cat VARCHAR,
@@ -17,7 +17,7 @@ INSERT INTO pizza_orders VALUES(6,23,"Supreme","Meat Pizza","Family",14);
 INSERT INTO pizza_orders VALUES(7,45,"Bacon Ranch","Meat Pizza","Family",11);
 
 CREATE TABLE toppings (
-  item_id INT,
+  item_id INT UNIQUE,
   sku INT,
   item_name VARCHAR,
   item_category VARCHAR,
@@ -89,7 +89,7 @@ WHERE pizza_cat = 'Pizza';
 
 
 CREATE TABLE ordered (
-    ID int NOT NULL,
+    ID int NOT NULL UNIQUE,
     LastName varchar(255) NOT NULL,
     FirstName varchar(255),
     Age int,
