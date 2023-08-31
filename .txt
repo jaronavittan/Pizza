@@ -25,13 +25,13 @@ CREATE TABLE toppings (
   item_price INT
  );
 
-INSERT INTO toppings VALUES(1,10,'Mushrooms','topping','Bag',1);
-INSERT INTO toppings VALUES(2,10,'Bacon','topping','Box',1.75);
-INSERT INTO toppings VALUES(3,10,'Tomatoes','topping','Bag',1);
-INSERT INTO toppings VALUES(4,10,'Pepperoni','topping','Box',2);
-INSERT INTO toppings VALUES(5,10,'Corn','topping','Bag',1);
-INSERT INTO toppings VALUES(6,10,'Sausage','topping','Box',3);
-INSERT INTO toppings VALUES(7,10,'Black Olives','topping;,'Bag',1);
+INSERT INTO toppings VALUES(1,10,'Mushrooms','veg','Bag',1);
+INSERT INTO toppings VALUES(2,10,'Bacon','meat','Box',1.75);
+INSERT INTO toppings VALUES(3,10,'Tomatoes','veg','Bag',1);
+INSERT INTO toppings VALUES(4,10,'Pepperoni','meat','Box',2);
+INSERT INTO toppings VALUES(5,10,'Corn','veg','Bag',1);
+INSERT INTO toppings VALUES(6,10,'Sausage','meat','Box',3);
+INSERT INTO toppings VALUES(7,10,'Black Olives','veg','Bag',1);
 
 
 SELECT item_name, item_price, sku
@@ -128,7 +128,10 @@ FROM toppings
 ORDER BY item_price ASC;
 
 
-
+CREATE VIEW meat_toppings AS
+SELECT item_name, item_category
+FROM toppings
+WHERE item_category = 'meat';
 
 
 
