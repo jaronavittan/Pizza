@@ -135,8 +135,10 @@ WHERE item_category = 'meat';
 
 
 
-
-
+--SELECT column_names
+--FROM table_name
+--WHERE column_name IS NULL;
+--THE CODE ABOVE WILL EXECUTE AN ERROR
 
 
 
